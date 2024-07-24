@@ -1,0 +1,25 @@
+[gd_resource type="Terrain3DAssets" load_steps=6 format=3 uid="uid://b510qiaql6los"]
+
+[ext_resource type="Texture2D" uid="uid://dsdsxomfmb3w" path="res://shared/assets/forest/textures/grass_patchy/vcjmej0s_2K_Albedo.jpg" id="1_dwhru"]
+[ext_resource type="Texture2D" uid="uid://5vv3oygf70lj" path="res://shared/assets/forest/textures/grass_patchy/vcjmej0s_2K_Normal.jpg" id="2_4x5hv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0evg0"]
+cull_mode = 2
+vertex_color_use_as_albedo = true
+backlight_enabled = true
+backlight = Color(0.5, 0.5, 0.5, 1)
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_m4fu4"]
+height_offset = 0.5
+density = 10.0
+material_override = SubResource("StandardMaterial3D_0evg0")
+generated_type = 1
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_dqtql"]
+name = "vcjmej0s_2K_Albedo"
+albedo_texture = ExtResource("1_dwhru")
+normal_texture = ExtResource("2_4x5hv")
+
+[resource]
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_m4fu4")])
+texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_dqtql")])

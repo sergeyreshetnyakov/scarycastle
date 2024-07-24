@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://72786i4g3elq"]
+
+[ext_resource type="Texture2D" uid="uid://dsdsxomfmb3w" path="res://shared/assets/forest/textures/grass_patchy/vcjmej0s_2K_Albedo.jpg" id="1_h5dc1"]
+[ext_resource type="Texture2D" uid="uid://4qslh1shoa6s" path="res://shared/assets/forest/textures/grass_patchy/vcjmej0s_2K_AO.jpg" id="2_k6oqm"]
+[ext_resource type="Texture2D" uid="uid://5vv3oygf70lj" path="res://shared/assets/forest/textures/grass_patchy/vcjmej0s_2K_Normal.jpg" id="2_mgsw6"]
+[ext_resource type="Texture2D" uid="uid://cwub4k05m30j1" path="res://shared/assets/forest/textures/grass_patchy/vcjmej0s_2K_Displacement.jpg" id="3_074mg"]
+[ext_resource type="Texture2D" uid="uid://dbufiu5rc5slp" path="res://shared/assets/forest/textures/grass_patchy/vcjmej0s_2K_Roughness.jpg" id="3_1051h"]
+
+[resource]
+albedo_texture = ExtResource("1_h5dc1")
+roughness_texture = ExtResource("3_1051h")
+emission_texture = ExtResource("2_k6oqm")
+normal_enabled = true
+normal_texture = ExtResource("2_mgsw6")
+ao_enabled = true
+ao_texture = ExtResource("2_k6oqm")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_074mg")

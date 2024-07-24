@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://crott6vg50yhb"]
+
+[ext_resource type="FontFile" uid="uid://di0owggl0nkv2" path="res://shared/RobotoSerif.ttf" id="1_vlt7x"]
+
+[resource]
+default_font = ExtResource("1_vlt7x")
+default_font_size = 16

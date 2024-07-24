@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://by7g6qtybner8"]
+
+[ext_resource type="Script" path="res://shared/Player/interactRay.gd" id="1_10173"]
+[ext_resource type="Theme" uid="uid://crott6vg50yhb" path="res://shared/theme.tres" id="2_6brld"]
+[ext_resource type="FontFile" uid="uid://di0owggl0nkv2" path="res://shared/RobotoSerif.ttf" id="2_vygxb"]
+
+[node name="InteractRay" type="RayCast3D"]
+target_position = Vector3(0, 0, -4)
+collide_with_areas = true
+script = ExtResource("1_10173")
+
+[node name="Prompt" type="Label" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 10.0
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+theme = ExtResource("2_6brld")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("2_vygxb")
+text = "Prompt
+[key]"
+horizontal_alignment = 1
+
+[node name="Message" type="Label" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -43.5
+offset_top = -30.0
+offset_right = 43.5
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_6brld")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_clear_message"]

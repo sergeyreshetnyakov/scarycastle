@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://f70f4tc1wf03"]
+
+[ext_resource type="Texture2D" uid="uid://cawrw7qbv12ns" path="res://shared/assets/forest/textures/grass_dried/shqoejna_2K_Albedo.jpg" id="1_dyqki"]
+[ext_resource type="Texture2D" uid="uid://b65ersgwwtyt8" path="res://shared/assets/forest/textures/grass_dried/shqoejna_2K_AO.jpg" id="2_8ghfq"]
+[ext_resource type="Texture2D" uid="uid://cy50oukgl4krr" path="res://shared/assets/forest/textures/grass_dried/shqoejna_2K_Displacement.jpg" id="3_l0ab6"]
+[ext_resource type="Texture2D" uid="uid://c36egla3rustn" path="res://shared/assets/forest/textures/grass_dried/shqoejna_2K_Roughness.jpg" id="4_p8ogi"]
+
+[resource]
+albedo_texture = ExtResource("1_dyqki")
+roughness_texture = ExtResource("4_p8ogi")
+normal_enabled = true
+normal_texture = ExtResource("4_p8ogi")
+ao_enabled = true
+ao_texture = ExtResource("2_8ghfq")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_l0ab6")

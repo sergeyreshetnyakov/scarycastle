@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=3 uid="uid://bnhyvqth1t2ea"]
+
+[ext_resource type="PackedScene" uid="uid://dekv4eycp4bcy" path="res://shared/Player/PlayerController.tscn" id="1_chw1r"]
+[ext_resource type="Terrain3DStorage" uid="uid://braci2i3arukc" path="res://levels/forest_terrain_storage.res" id="2_d7y5g"]
+[ext_resource type="Terrain3DMaterial" uid="uid://dul22feqmycqy" path="res://levels/forest_terrain_material.tres" id="3_ah6nq"]
+[ext_resource type="Terrain3DAssets" uid="uid://b510qiaql6los" path="res://levels/forest_terrain_assets.tres" id="4_shfyp"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_67tjs"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_smx80"]
+sky_material = SubResource("ProceduralSkyMaterial_67tjs")
+
+[sub_resource type="Environment" id="Environment_ws5v0"]
+background_mode = 2
+sky = SubResource("Sky_smx80")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qxa1n"]
+
+[node name="Forest" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ws5v0")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="PlayerController" parent="." instance=ExtResource("1_chw1r")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 32.5284, 57.2208, -68.6929)
+
+[node name="Terrain3D" type="Terrain3D" parent="."]
+storage = ExtResource("2_d7y5g")
+material = ExtResource("3_ah6nq")
+assets = ExtResource("4_shfyp")
+debug_show_collision = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Terrain3D"]
+mesh = SubResource("ArrayMesh_qxa1n")
+skeleton = NodePath("")
